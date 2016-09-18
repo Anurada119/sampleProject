@@ -1,0 +1,26 @@
+{
+  "name": "sample_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-jade": "^1.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "sampleProject"
+  },
+  "keywords": [
+    "gulp-sass-jade-autoprifixer-browserSync"
+  ],
+  "author": "Anurada",
+  "license": "ISC"
+}
