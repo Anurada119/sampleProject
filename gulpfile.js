@@ -14,8 +14,8 @@ gulp.task('jade', function() {
             pretty: true
         }))
         .pipe(gulp.dest('builds/developments'))
-        .pipe(reload({ stream: true }))
-})
+        .pipe(reload({ stream: true }));
+});
 
 gulp.task('sass', function() {
     var config = {}
@@ -32,28 +32,28 @@ gulp.task('sass', function() {
         .pipe(sass())
         .pipe(autoprefixer('last 2 versions'))
         .pipe(gulp.dest('builds/developments/css'))
-        .pipe(reload({ stream: true }))
-})
+        .pipe(reload({ stream: true }));
+});
 
 gulp.task('scripts', function() {
     return gulp.src('src/js/**/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('builds/developments/js'))
-        .pipe(reload({ stream: true }))
-})
+        .pipe(reload({ stream: true }));
+});
 
 gulp.task('browserSync', function() {
     browserSync({
         server: {
             baseDir: 'builds/developments'
         }
-    })
-})
+    });
+});
 
 gulp.task('watch', function() {
     gulp.watch('src/templates/**/*.jade', ['jade'])
     gulp.watch('src/js/**/*.js', ['scripts'])
-    gulp.watch('src/sass/**/*.sass', ['sass'])
+    gulp.watch('src/sass/**/*.sass', ['sass']);
 });
 
-gulp.task('default', ['jade', 'sass', 'scripts', 'browserSync', 'watch'])
+gulp.task('default', ['jade', 'sass', 'scripts', 'browserSync', 'watch']);
